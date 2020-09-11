@@ -11,4 +11,4 @@ for i in os.listdir('./download/'):
     rows = rows.fetchall()
 
     for i in rows:
-        print(i)
+        print(i[1])
