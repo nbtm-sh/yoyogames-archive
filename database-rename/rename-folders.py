@@ -2,13 +2,19 @@ import sqlite3
 import shutil
 import os
 
-file_rows = open('../../txt/games.txt').readlines()
+GAMES_FILE = '../../txt/games.txt'
+DOWNLOAD_DIRECTORY = '../../download/'
 
-for i in os.listdir('../../download/'):
-    folder = i.replace('../../download/', '')
+file_rows = open(GAMES_FILE).readlines()
+
+for i in os.listdir(DOWNLOAD_DIRECTORY):
+    folder = i.replace(DOWNLOAD_DIRECTORY, '')
     rename = ""
     for i in file_rows:
         if folder in i:
             rename = i.strip().replace("game:", "")
+    
+    print(DOWNLOAD_DIRECTORY + '/' + rename)
+    #os.rename(i, DOWNLOAD_DIRECTORY + '/' + rename)
     
     print(rename)
