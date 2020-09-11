@@ -14,5 +14,5 @@ for i in os.listdir(DOWNLOAD_DIRECTORY):
         if folder in i:
             rename = i.strip().replace("game:", "")
     
-    print(DOWNLOAD_DIRECTORY + rename)
+    print(i, DOWNLOAD_DIRECTORY + rename)
     os.rename(i, DOWNLOAD_DIRECTORY + '/' + rename)
