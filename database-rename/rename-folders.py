@@ -9,6 +9,6 @@ for i in os.listdir('../../download/'):
     rename = ""
     for i in file_rows:
         if folder in i:
-            rename = i
+            rename = i.strip().replace("game:", "")
     
     print(rename)
