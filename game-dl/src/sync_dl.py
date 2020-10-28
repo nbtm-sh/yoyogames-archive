@@ -17,7 +17,7 @@ class SyncDL:
     def start_download_sync(self):
         for i in self.downloads:
             try:
-                download_path = self.output_folder + self.path_delim + i.name
+                download_path = self.output_folder + self.path_delim + i.archive_id + "-" + i.name
 
                 if (os.path.exists(download_path)):
                     continue # Skip this download
